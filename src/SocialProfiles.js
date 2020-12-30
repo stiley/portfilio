@@ -3,7 +3,7 @@ import SOCIAL_PROFILES from "./data/socialProfiles";
 
 class SocialProfile extends React.Component {
     render() {
-        const {image, link, description} = this.props.profile;
+        const {image, link} = this.props.profile;
         return(
             <span>
                 <a href={link}>

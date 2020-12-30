@@ -18,7 +18,7 @@ const SOCIAL_PROFILES = [
         description: "My github projects"
     },
     {
-        id: 1,
+        id: 3,
         image: linkedInIcon,
         link: "https://www.linkedin.com/in/sean-tiley-165b745/",
         description: "LinkedIn"
