@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    state = {displayBio: false}
+
+    // methods invoked by controls need to be callbacks so we do not have to bind with .bind(this)
+    toggleDisplayBio = () =>{
+        this.setState({displayBio: ! this.state.displayBio})
+    }
+
+    render(){
+        const bio = this.state.displayBio ? (
+            <div>
+                <p>I live in Mississauga Ontario</p>
+                <p>My favourite language is JavaScript</p>
+                <p>Besided coding and testing, I love music</p>
+                <button onClick={this.toggleDisplayBio}>Read less</button>
+            </div>
+        ): (
+            <div>
+                <button onClick={this.toggleDisplayBio}>Read more...</button>
+            </div>
+        );
+        return(
+            <div>
+                <h1>Hello</h1>
+                <p>My Name is Sean Tiley</p>
+                {bio}
+            </div>
+        );
+    }
 }
 
 export default App;
