@@ -9,7 +9,6 @@ class App extends React.Component{
     toggleDisplayBio = () =>{
         this.setState({displayBio: ! this.state.displayBio})
     }
-
     render() {
         return (
             <div>
@@ -39,7 +38,6 @@ class App extends React.Component{
             </div>
         )
     }
-
 }
 
 export default App;
